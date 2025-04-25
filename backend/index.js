@@ -11,10 +11,15 @@ const furiaTeam = async () => {
     try {
         const team = await HLTV.getTeam({ id: 8297 });
         return `
-            <strong>🏆 FURIA Esports</strong><br>
-            Ranking: #${team.rank} <br>
-            Jogadores:
-            ${team.players.map((p) => `- ${p.name}`).join('<br>')}
+            <div class="card-message">
+                <img src="/furia.svg" alt="Logo da FURIA" style="width: 100px; display: block; margin: 0 auto 16px;" />
+                <h3 style="text-align: center; font-family: sans-serif; font-size: 24px;">FURIA Esports</h3>
+                <p style="text-align: center; font-family: sans-serif;">Ranking mundial: <strong>#${team.rank}</strong></p>
+                <p style="font-weight: bold; margin-top: 10px;">Jogadores:</p>
+                <ul style="padding-left: 20px; font-family: sans-serif;">
+                    ${team.players.map((p) => `<li>${p.name}</li>`).join('')}
+                </ul>
+            </div>
         `;
     } catch (err) {
         return `Erro ao buscar informações da FURIA: ${err.message}`;
