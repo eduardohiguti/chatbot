@@ -52,13 +52,21 @@ const Chat: React.FC = () => {
     };
 
     const formatMessage = (text: string) => {
+        if (typeof text !== 'string') return '';
+    
         const urlRegex = /(https?:\/\/[^\s]+)/g;
-        return text.replace(urlRegex, (url) => {
-            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
-        }).replace(/\n/g, '<br>');
+        const html = text
+            .replace(urlRegex, (url) => {
+                if (url.match(/\.(jpeg|jpg|gif|png|svg)$/)) {
+                    return `<img src="${url}" alt="imagem" style="max-width: 200px;" />`;
+                }
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+            })
+            .replace(/\n/g, '<br>');
+    
+        return html;
     };
-
-
+    
     return (
         <div className="chat-container">
             <div className="chat-box">

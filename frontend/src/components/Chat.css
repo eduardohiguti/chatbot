@@ -19,6 +19,13 @@
     gap: 8px;
 }
 
+.chat-box .message img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
 .message {
     padding: 10px;
     border-radius: 8px;
