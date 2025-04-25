@@ -42,7 +42,7 @@ Servidor disponível em: `http://localhost:8080`
 
 ###  Frontend
 
-Assumindo que esteja dentro de um projeto React:
+Assumindo que esteja dentro de um projeto React + Typescript:
 
 ```bash
 npm install axios
