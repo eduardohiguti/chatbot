@@ -11,8 +11,8 @@ const furiaTeam = async () => {
     try {
         const team = await HLTV.getTeam({ id: 8297 });
         return `
-            ${team.logo}
-            Ranking: #${team.rank}
+            <strong>🏆 FURIA Esports</strong><br>
+            Ranking: #${team.rank} <br>
             Jogadores:
             ${team.players.map((p) => `- ${p.name}`).join('<br>')}
         `;
@@ -36,6 +36,7 @@ const saudacoes = ["oi", "ola", "bom dia", "boa tarde", "boa noite"];
 const respostas = {
     "redes sociais": "Essas são as nossas redes sociais!\n\nX - https://x.com/furia\nInstagram - https://www.instagram.com/furiagg/\nTwitch - https://www.twitch.tv/furiatv",
     "site": "Aqui o link do nosso site oficial! https://www.furia.gg/",
+    "ajuda": "Você pode perguntar sobre o time e sobre as notícias do time de CS da FURIA!"
 };
 
 function normalizar(mensagem) {
