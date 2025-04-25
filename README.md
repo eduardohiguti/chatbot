@@ -24,8 +24,6 @@ O bot pode responder sobre:
 
 ### Frontend (React + TypeScript):
 - `axios`
-- `useState` e `useEffect`
-- HTML dinâmico com `dangerouslySetInnerHTML`
 
 ---
 
