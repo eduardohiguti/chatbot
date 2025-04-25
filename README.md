@@ -44,7 +44,7 @@ Assumindo que esteja dentro de um projeto React + Typescript:
 
 ```bash
 npm install axios
-npm start
+npm run dev
 ```
 
 ---
